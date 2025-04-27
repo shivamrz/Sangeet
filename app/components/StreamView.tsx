@@ -11,7 +11,6 @@ import { Appbar } from "../components/Appbar"
 // @ts-expect-error : player might not be defined on first render
 import YouTubePlayer from 'youtube-player';
 import Image from "next/image"
-import { useSession } from "next-auth/react"
 // Types
 interface Song {
   "id": string,
@@ -127,7 +126,6 @@ export default function StreamView({
         })
     })
   }
-
   const handleVote = async (id: string, isUpvote: boolean) => {
     setSongs(songs.map((song) => 
         song.id === id
@@ -221,10 +219,9 @@ export default function StreamView({
                     <div>
                       <h3 className="text-xl font-bold text-white">{currentVideo?.title}</h3>
                       <div className="flex items-center gap-2 text-violet-300">
-                        <span className="text-sm">Most Upvoted • {currentVideo?.upvotes} votes</span>
+                        {/* <span className="text-sm">Most Upvoted • {currentVideo?.upvotes} votes</span> */}
                       </div>
                     </div>
-
                     {playVideo && <Button disabled={playNexetLoader}
                       onClick={() => {                        
                         playNextSong()
