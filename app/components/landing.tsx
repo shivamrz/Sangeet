@@ -24,14 +24,7 @@ export default function LandingPage() {
             <p className="text-xl text-gray-300">
               Create collaborative music streams where your audience votes on what plays next.
             </p>
-            <Button onClick={()=>{
-              if(session){
-                redirect("/dashboard")
-              }else{
-                alert("Please log in to Continue...")
-              }
-              
-            }} className="px-8 py-6 text-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 rounded-xl shadow-lg shadow-violet-700/20">
+            <Button className="px-8 py-6 text-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 rounded-xl shadow-lg shadow-violet-700/20">
               Start a Stream
             </Button>
           </div>
