@@ -3,11 +3,8 @@ import Link from "next/link"
 import { Music, Users, Share2, Youtube, Music2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Appbar } from "./Appbar"
-import { redirect } from "next/navigation"
-import { useSession } from "next-auth/react"
 
 export default function LandingPage() {
-  const session=useSession();
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       {/* Navbar */}
